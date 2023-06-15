@@ -1,0 +1,28 @@
+package coreJava2;
+import java.util.Scanner;
+public class ArrayTask2 {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		String[] sInfo = new String[4];
+		int[] marks = new int[6];
+		
+		
+		System.out.println("Please enter student Name");
+		sInfo[0] = scanner.nextLine();
+		System.out.println("Please enter student id");
+		sInfo[0] = scanner.nextLine();
+		System.out.println("Please enter branch");
+		sInfo[0] = scanner.nextLine();
+		System.out.println("Please enter semester");
+		sInfo[0] = scanner.nextLine();
+		
+		System.out.println("Enter grade for Java");
+		System.out.println("Enter grade for Python");
+		System.out.println("Enter grade for Web");
+		System.out.println("Enter grade for C");
+		System.out.println("Enter grade for CPP");
+		System.out.println("Enter grade for Springboot");
+		
+	}
+
+}

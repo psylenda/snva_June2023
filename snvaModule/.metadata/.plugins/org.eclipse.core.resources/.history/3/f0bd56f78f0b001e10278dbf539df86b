@@ -1,0 +1,172 @@
+package coreJava2;
+import java.util.Scanner;
+
+public class icecream {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Hello, what is your Name?");
+		String name = scanner.nextLine();
+		System.out.println("Hello, "+name+"! How are you today?");
+		String howToday = scanner.nextLine();
+		String receipt = "Orders So Far: \n ============================ \n";
+		System.out.println("Would you like [1] Scoops or [2] Exquisite?");
+		int option = scanner.nextInt();
+		
+		if (option ==1) {
+			System.out.println("      ICE CREAM SHOP    ");
+			System.out.println("==========================");
+			System.out.println("1.Chocolate    $8");
+			System.out.println("2.Mango        $11");
+			System.out.println("3.Vanilla      $10");
+			System.out.println("4.Mint         $9");
+			System.out.println("5.Strawberry   $4");
+			System.out.println("==========================");
+		}
+		else {
+			System.out.println("      ICE CREAM SHOP(ex) ");
+			System.out.println("==========================");
+			System.out.println("1.Sundae       $7");
+			System.out.println("2.Banana Split $12");
+			System.out.println("3.Dilly Bar    $2");
+			System.out.println("4.Choco Taco   $3");
+			System.out.println("5.Smoothie     $13");
+			System.out.println("==========================");
+		}
+
+		
+		
+		boolean ordering = true;
+		int total = 0;
+		int currentSelect = 1;
+		int cQ = 0;
+		int manQ = 0;
+		int vQ = 0;
+		int mintQ = 0;
+		int sQ = 0;
+		int sunQ = 0;
+		int bsQ = 0;
+		int dbQ = 0;
+		int ctQ = 0;
+		int smQ = 0;
+		
+		do {
+			
+			System.out.println("What would you like to order? [1-5]");
+			currentSelect = scanner.nextInt();
+			System.out.println("And how many would you like?");
+			int q = scanner.nextInt();
+			int quantity = q;
+			if (option == 1) {
+				switch(currentSelect) {
+				case 1: 
+					total += (8*quantity); 
+					cQ += quantity;
+					break;
+				case 2: 
+					total += (11*quantity);
+					manQ += quantity;
+					break;
+				case 3: 
+					total += (10*quantity);
+					vQ += quantity;
+					break;
+				case 4: 
+					total += (9*quantity);
+					mintQ += quantity;
+					break;
+				case 5: 
+					total += (4*quantity);
+					sQ += quantity;
+					break;
+				}
+				
+			}
+			else {
+				switch(currentSelect) {
+				case 1: 
+					total += (7*quantity);
+					sunQ += quantity;
+					break;
+				case 2:
+					total += (12*quantity);
+					bsQ += quantity;
+					break;
+				case 3:
+					total += (2*quantity);
+					dbQ += quantity;
+					break;
+				case 4:
+					total += (3*quantity);
+					ctQ += quantity;
+					break;
+				case 5:
+					total += (13*quantity);
+					smQ += quantity;
+					break;
+				}
+
+			}
+			System.out.println("==========================");
+			System.out.println("1.Chocolate    $8    "+cQ);
+			System.out.println("2.Mango        $11   "+manQ);
+			System.out.println("3.Vanilla      $10   "+vQ);
+			System.out.println("4.Mint         $9    "+mintQ);
+			System.out.println("5.Strawberry   $4    "+sQ);
+			System.out.println("1.Sundae       $7    "+sunQ);
+			System.out.println("2.Banana Split $12   "+bsQ);
+			System.out.println("3.Dilly Bar    $2    "+dbQ);
+			System.out.println("4.Choco Taco   $3    "+ctQ);
+			System.out.println("5.Smoothie     $13   "+smQ);
+			System.out.println("==========================");
+			System.out.println("Would you like to order anything else? [1] yes [2] no");
+			
+			int customerInput = scanner.nextInt();
+			if (customerInput == 1) {
+				ordering = true;
+				System.out.println("Exquisite (2) or Regular? (1)");
+				option = scanner.nextInt();
+				if (option ==1) {
+					System.out.println("      ICE CREAM SHOP    ");
+					System.out.println("==========================");
+					System.out.println("1.Chocolate    $8");
+					System.out.println("2.Mango        $11");
+					System.out.println("3.Vanilla      $10");
+					System.out.println("4.Mint         $9");
+					System.out.println("5.Strawberry   $4");
+					System.out.println("==========================");
+				}
+				else {
+					System.out.println("      ICE CREAM SHOP(ex) ");
+					System.out.println("==========================");
+					System.out.println("1.Sundae       $7");
+					System.out.println("2.Banana Split $12");
+					System.out.println("3.Dilly Bar    $2");
+					System.out.println("4.Choco Taco   $3");
+					System.out.println("5.Smoothie     $13");
+					System.out.println("==========================");
+				}
+				
+			}
+			else {
+				ordering = false;
+			}
+		} while(ordering == true);
+		
+		System.out.println("RECEIPT");
+		System.out.println("==========================");
+		System.out.println("1.Chocolate    $8    "+cQ);
+		System.out.println("2.Mango        $11   "+manQ);
+		System.out.println("3.Vanilla      $10   "+vQ);
+		System.out.println("4.Mint         $9    "+mintQ);
+		System.out.println("5.Strawberry   $4    "+sQ);
+		System.out.println("1.Sundae       $7    "+sunQ);
+		System.out.println("2.Banana Split $12   "+bsQ);
+		System.out.println("3.Dilly Bar    $2    "+dbQ);
+		System.out.println("4.Choco Taco   $3    "+ctQ);
+		System.out.println("5.Smoothie     $13   "+smQ);
+		System.out.println("==========================");
+		System.out.println("your order comes out to $"+total);
+		 
+		scanner.close();
+	}
+}

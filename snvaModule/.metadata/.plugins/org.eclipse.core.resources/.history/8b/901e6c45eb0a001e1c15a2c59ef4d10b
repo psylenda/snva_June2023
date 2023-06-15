@@ -1,0 +1,21 @@
+package coreJava2;
+import java.util.Scanner;
+
+public class ForLoop2 {
+	public static void main(String[] args) {
+			
+		
+		Scanner scanner = new Scanner(System.in);
+		for(;;) {
+			System.out.println("Enter yes/no");
+			String input = scanner.next();
+			if (input == "yes") {
+				System.out.println("Java is Easy to Learn");
+			}
+			else{
+				break;
+			}
+		}
+		scanner.close();
+	}
+}

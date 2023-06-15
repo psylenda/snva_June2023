@@ -1,0 +1,21 @@
+package coreJava2;
+
+import java.util.Scanner;
+
+public class Switch1 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter Mont \n1.Jan\n2.Feb\n..\n12.Dec");
+		int month = scanner.nextInt();
+		String season;
+		switch(month) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			season = "Winter";
+			break;
+		}
+	}
+}

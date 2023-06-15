@@ -1,0 +1,11 @@
+package coreJava2;
+import java.util.Scanner;
+public class loopPractice {
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Enter topic (JS, Java, RDMBS: ");
+	System.out.println("At what age did you start coding: ");
+	int age = scanner.nextInt();
+	
+	
+	scanner.close();
+}

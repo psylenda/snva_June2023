@@ -123,6 +123,7 @@ public class icecream {
 			System.out.println("===========================");
 			System.out.println(receipt);
 			System.out.println("=======================================================");
+			System.out.println("TOTAL :   $"+total);
 			System.out.println("Would you like to order anything else? [1] yes [2] no");
 			
 			int customerInput = scanner.nextInt();
